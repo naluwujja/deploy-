@@ -13,3 +13,6 @@ auto-gptq
 optimum
 bitsandbytes
 huggingface_hub
+uuid
+re
+torch
