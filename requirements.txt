@@ -15,4 +15,5 @@ bitsandbytes
 huggingface_hub
 uuid
 re
-torch
+torch>=1.13.0
+regex
