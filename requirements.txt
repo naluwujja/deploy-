@@ -1,4 +1,10 @@
-
+streamlit==1.16.0
+torch>=1.13.0
+rich>=10.14.0
+markdown-it-py>=2.2.0
+pygments>=2.13.0
+mdurl>=0.1.2
+auto-gptq==0.7.1
 numpy
 pandas
 regex
