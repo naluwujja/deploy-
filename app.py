@@ -1,7 +1,20 @@
 import streamlit as st
 import uuid
 import re
-import torch
+try:
+    import torch
+except ImportError:
+    import subprocess
+    subprocess.check_call(["pip", "install", "torch>=1.13.0"])
+    import torch
+
+# Then try to import auto-gptq or install it if needed
+try:
+    import auto_gptq
+except ImportError:
+    import subprocess
+    subprocess.check_call(["pip", "install", "auto-gptq"])
+    import auto_gptq
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings, Document, VectorStoreIndex
 from llama_index.core.retrievers import VectorIndexRetriever
